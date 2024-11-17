@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Tinos&display=swap');
+
+* {
+    box-sizing: border-box;
+    /* box size will not be considering padding -> make boxes to have the same size */
+    margin: 0;
+    padding: 0;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: "Montserrat", sans-serif;
+}
+
+p {
+    font-family: "Lato", sans-serif;
+}
+
+strong {
+    font-family: "Lato", sans-serif;
+    font-weight: bold;
+}
+
+body {
+    background-color: #1c4208;
+    margin-bottom: 20px;
+}
+
+section {
+    padding-top: 79px;
+}
+   
+header {
+    background-color: #1c4208;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+li,
+a,
+button {
+    /* font-family: "Montserrat", sans-serif; */
+    font-weight: 500;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    /* justify-content: space-between; evenly spaced between contents */
+    justify-content: center;
+    /* pushed everything to the right */
+    align-items: center;
+    padding: 0 5%;
+}
+
+#main-header {
+    position: fixed;
+    width: 100%;
+    background: transparent;
+    transition: background 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+#logoSectionComplex,
+#logoSectionComplex1,
+#logoSectionComplex2 {
+    display: flex;
+}
+
+#logoSectionEasy {
+    display: contents;
+}
+
+.brand-name-anchor {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.brand-name {
+    height: 20px;
+}
+
+#company-description-text {
+    text-align: center;
+}
+
+.nav__links {
+    list-style: none;
+    /* delete bullets */
+}
+
+.nav__links li {
+    display: inline-block;
+    /* go side-by-side instead of up and down */
+    padding: 0 20px;
+}
+
+.nav__links li a {
+    transition: all 0.3s ease 0s;
+    /* ease 0s make it smooth -> no delay */
+}
+
+.nav__links li a:hover {
+    /* hover -> when we have our mouse over it */
+    color: rgb(121, 121, 121);
+}
+
+button {
+    margin-left: 20px;
+    /* leave some space between button and anchor links */
+    padding: 9px 25px;
+    color: #000000;
+    background-color: rgba(244, 167, 187, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: rgba(244, 167, 187, 0.8);
+}
+
+.brand-logo-name {
+    display: flex;
+    margin-right: auto;
+    /* keep the logo stick to the left */
+}
+
+.brand-logo {
+    cursor: pointer;
+    height: 50px;
+    margin: 20px;
+}
+
+.brand-text {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 22.5px;
+    color: #1CA1AA;
+    margin-left: -14;
+    margin-top: 0px;
+}
+
+
+/* The overlay menu */
+.overlay-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+/* Close button */
+.closebtn {
+    position: absolute;
+    top: 5px;
+    right: 25px;
+    font-size: 60px;
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Overlay content */
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay-content a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay-content a:hover,
+.overlay-content a:focus {
+    color: #f1f1f1;
+}
+
+.left-text {
+    display: flex;
+    margin: 4rem 7rem;
+}
+
+.center-text {
+    display: grid;
+    justify-content: center;
+    margin: 4rem 10rem;
+    line-height: 2;
+}
+
+.description-text {
+    font-size: clamp(0.8rem, 0.8rem + 0.25vw, 1rem);
+    text-align: justify;
+}
+
+.bank-text, .bank-acc {
+    font-size: clamp(1.0rem, 1.0rem + 0.25vw, 1.2rem);
+    text-align: center;
+}
+
+.bank-acc strong{
+    font-size: clamp(1.3rem, 1.3rem + 0.25vw, 1.7rem);
+    text-align: center;
+}
+
+.description-text-title {
+    text-align: center;
+    font-size: 20px;
+}
+
+.title-text {
+    font-size: clamp(2.5rem, 2.5rem + 0.25vw, 1.8rem);
+    font-family: "Archivo Black", sans-serif;
+}
+
+.image-container {
+    margin: 4rem;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+}
+
+#proof-image-1 {
+    width: auto;
+    height: 100%;
+}
+
+#company-description-title {
+    margin: 5rem 0rem 0rem 4rem;
+}
+
+#testimony-title {
+    margin: 9rem 10rem 4rem;
+}
+
+
+#title-partner {
+    margin: 4rem 4rem 0rem 4rem;
+}
+
+#image-partner-container {
+    margin: 0.5rem 10vw;
+    width: 80vw;
+    height: 10rem;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#image-partner-container::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+#image-partner-container div {
+    min-width: 20vw;
+    margin: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+#image-partner-container div img {
+    overflow-x: auto;
+}
+
+#description-copyright-text {
+    font-size: clamp(0.5rem, 0.5rem + 0.25vw, 0.7rem);
+}
+
+.header-2,
+#brand-header-2 {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c4208;;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#swiper-container, #cert {
+    width: 100%;
+    height: fit-content;
+    /* background: #222; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+#swiper-container .overlay, #cert .overlay {
+    position: absolute;
+}
+
+.swiper {
+    width: 80%;
+    margin: auto;
+}
+.swiper-slide {
+    margin: auto;
+}
+
+.swiper-slide img {
+    width: 100%;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: black;
+}
+.swiper-pagination-bullet-active {
+    background: black;
+}
+
+/* ------------------INDEX-------------------- */
+
+.full_width_img-container {
+    position: relative;
+    width: 100%;
+}
+
+.full_width_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.full_width_img-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black with 0.5 opacity */
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    line-height: 20px;
+}
+
+.image-text h1 {
+    line-height: 80px;
+    color: white;
+    font-size: 30px;
+}
+
+.main-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8dc3e8;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.main-button:hover {
+    background-color: #2980b9;
+}
+
+/* ------------------endINDEX-------------------- */
+
+/* ------------------CONTACT-------------------- */
+.subtitle {
+    font-size: clamp(1.3rem, 1.3rem + 0.25vw, 1.5rem);
+}
+
+#phone-no {
+    line-height: 48px;
+}
+
+#contact-us-container {
+    display: block;
+    margin: 4rem 7rem;
+}
+
+#contact-us-container div {
+    width: 100%;
+    height: 6vh;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+
+#contact-title {
+   width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+}
+
+#contact-title span {
+    background:#fff; 
+    padding:0 10px; 
+}
+
+#big-container {
+    display: flex;
+    /* flex-direction: row-reverse; */
+}
+
+#left-container {
+    width: 50vw;
+}
+
+#right-container {
+    width: 50vw;
+    height: 113vh;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+#map-container {
+    height: 25vw;
+    justify-content: center;
+    height: 50%;
+    margin-top: 3rem;
+    display: flex;
+}
+
+#work {
+    margin-top: 4rem;
+}
+
+/* ------------------endCONTACT-------------------- */
+
+/* ------------------BANK-------------------- */
+
+h2 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #000;
+    line-height: 0.1em;
+    margin: 10px 0 20px;
+    font-size: 32px;
+}
+
+span {
+    background: #1c4208;;
+    padding: 0 10px;
+    font-size: 32px;
+    /* font-family: 'Tinos', serif; */
+    font-weight: bold;
+}
+
+#bank-image-1 {
+    width: 50%;
+}
+
+#middle-text {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 20%;
+    text-align: center;
+    font-size: 20px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    line-height: 1.5;
+}
+
+#middle-text>p {
+    font-size: 20px;
+}
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+}
+
+/* ------------------endBANK-------------------- */
+
+/* ------------------PLAN-------------------- */
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 3rem;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 300px;
+    height: 200px;
+    margin: 15px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    line-height: 35px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+}
+
+#img-box {
+    width: 70vw;
+    margin: 0 15vw 5vh 15vw;
+}
+
+/* ------------------endPLAN-------------------- */
+
+/* ------------------CERT-------------------- */
+
+#cert {
+    margin: 0 25vw;
+    width: 50vw;
+}
+
+/* ------------------endCERT-------------------- */
+
+#work {
+    height: fit-content;
+}
+
+/* IPAD SCREEN CSS */
+@media only screen and (max-width: 1194px) {
+    .center-text {
+        margin: 4rem 10rem;
+    }
+
+    .description-text {
+        font-size: clamp(0.8rem, 0.8rem + 0.25vw, 1rem);
+        text-align: justify;
+    }
+}
+
+/* MOBILE SCREEN EXCLUSIVE CSS */
+@media only screen and (max-width: 800px) {
+    header {
+        justify-content: space-between;
+    }
+    
+    .center-text, .left-text {
+        margin: 2rem 3rem;
+    }
+
+    #company-description-title p {
+        text-align: center;
+    }
+    
+    #work {
+        width: 80vw;
+        height: fit-content;
+        margin: 0 10vw;
+    }
+
+    .description-text {
+        font-size: clamp(0.7rem, 0.7rem + 0.25vw, 0.9rem);
+        text-align: justify;
+    }
+
+    .header-1,
+    #brand-header-1 {
+        display: none;
+    }
+
+    .header-2,
+    #brand-header-2 {
+        display: flex;
+        margin-right: 0;
+    }
+
+    .title-text {
+        font-size: clamp(1.5rem, 1.5rem + 0.25vw, 1.8rem);
+    }
+
+    #company-description-title {
+        margin: 4rem 2rem 0rem 2rem;
+    }
+
+    /* ------------------INDEX-------------------- */    
+    .image-text {
+        top: 30%;
+        width: 80vw;
+    }
+
+    .image-text h1 {
+        font-size: 28px;
+    }
+
+    #brand-name-title {
+        line-height: 40vh;
+    }
+
+    #image-partner-container {
+        margin: 0.5rem 10vw;
+        width: 80vw;
+        height: 6rem;
+        display: flex;
+        justify-content: flex-start;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        /* Hide scrollbar for IE, Edge and Firefox */
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+    
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    #image-partner-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    #image-partner-container div {
+        min-width: 40vw;
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        scroll-snap-align: center;
+    }
+
+    #image-partner-container div img {
+        overflow-x: auto;
+    }
+
+    #nav-button {
+        margin: 15px;
+        display: block;
+    }
+
+    #big-container {
+        flex-direction: column;
+    }
+
+    .swiper {
+        width: 100%;
+    }
+    
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+
+    #swiper-container {
+        width: 90%;
+        margin: 5%;
+    }
+
+    /* ------------------endINDEX-------------------- */
+
+    /* ------------------CONTACT-------------------- */
+    .subtitle {
+        font-size: clamp(1.2rem, 1.2rem + 0.25vw, 1.4rem);
+    }
+
+    #left-container {
+        width: 100vw;
+    }
+    
+    #right-container {
+        width: 100vw;
+        height: 55vh;
+    }
+
+    #contact-us-container {
+        display: block;
+        margin: 2rem 3rem 4rem;
+    }
+
+    #contact-us-container div {
+        height: 5vh;
+    }
+
+    iframe {
+        width: 80%;
+    }
+
+    /* ------------------endCONTACT-------------------- */
+
+
+    /* ------------------BANK-------------------- */
+    #bank-image-1 {
+        width: 275px;
+    }
+
+    #middle-text,
+    #middle-text>p {
+        font-size: 16px;
+    }
+
+    /* ------------------endBANK-------------------- */
+
+    /* ------------------PLAN-------------------- */
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .box {
+        height: 100px;
+        margin: 1rem 1rem;
+    }
+
+    /* ------------------endPLAN-------------------- */
+    #cert {
+        margin: 0 10vw;
+        width: 80vw;
+    }
+}

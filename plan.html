@@ -1,0 +1,209 @@
+<html lang="ms">
+
+<head>
+    <title>GXI Trading</title>
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/brand-logo/favicon.ico" />
+    <!-- VIEWPORT -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div id="brand-header-1" class="brand-logo-name" class="header-1">
+            <div><a href="index.html"><img class="brand-logo" src="img/brand-logo/favicon.jpg" alt="logo"></a></div>
+        </div>
+
+        <div id="nav-bar" class="header-1">
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="plan.html">Plan</a></li>
+                    <li><a href="certificate.html">Certificate</a></li>
+                    <li><a href="bank.html">Bank</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <a class="header-1" style="padding: 0% 15%;">&nbsp</a>
+
+        <div id="brand-header-2" class="brand-logo-name" class="header-2">
+            <div><a href="index.html"><img class="brand-logo" src="img/brand-logo/favicon.jpg" alt="logo"></a></div>
+        </div>
+
+        <!--Burger Menu-->
+        <div id="nav-button">
+            <a href="javascript:void(0);" class="icon header-2" onclick="openNav()">
+                <i class="fa fa-regular fa-bars"></i>
+            </a>
+        </div>
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay-menu">
+
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="index.html">Home</a>
+                <a href="plan.html">Plan</a>
+                <a href="certificate.html">Certificate</a>
+                <a href="bank.html">Bank</a>
+                <a href="about.html">About Us</a>
+            </div>
+
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+    </header>
+
+    <!-- CONTENT -->
+    <section>
+        <div class="center-text">
+            <h1 class="title-text">
+                PLAN
+            </h1>
+        </div>
+
+
+        <!-- <img id="img-box" src="img/plan/plan.jpg"> -->
+         
+        <!-- Slider main container -->
+        <div id="swiper-container">
+            <div class="overlay"></div>
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="img/plan/plan.jpg"></div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+        <div class="flex-container">
+            <div class="box center-text">
+                ♻️ PLAN RM 200 <br>
+                RM 15 x 80 hari = RM 1,500
+            </div>
+
+            <div class="box center-text">
+                ♻️ PLAN RM 500 <br>
+                RM 38 x 80 hari = RM 3,040
+            </div>
+
+            <div class="box center-text">
+                ♻️ PLAN RM 1000 <br>
+                RM 85 x 80 hari = RM 6,800
+            </div>
+            
+            <div class="box center-text">
+                ♻️ PLAN RM 1500 <br>
+                RM 130 x 90 hari = RM 11,700
+            </div>
+            
+            <div class="box center-text">
+                ♻️ PLAN RM 2000 <br>
+                RM 180 x 90 hari = RM 16,200
+            </div>
+            
+            <div class="box center-text">
+                ♻️ PLAN RM 3000 <br>
+                RM 280 x 90 hari = RM 25,200
+            </div>
+            
+        </div>
+
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="center-text">
+            <p id="description-copyright-text">
+                Copyright © 2024 www.gxi-trad.com - All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+<script src="js/main.js"></script>
+<script src="js/showheader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Include jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    const swiper = new Swiper('.swiper', {
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        loop: true,
+
+        // If we need pagination
+        // pagination: {
+        //     el: '.swiper-pagination',
+        //     clicklable: true,
+        // },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>
+
+<!--Burger Menu-->
+<script>
+    var navButton = document.getElementById("nav-button");
+
+    function openNav() {
+        document.getElementById("myNav").style.width = "100%";
+
+        // Toggle the display property of the navigation menu
+        if (navButton.style.display === "block") {
+            navButton.style.display = "none";
+        } else {
+            navButton.style.display = "block";
+        }
+    }
+
+    function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+
+        // Toggle the display property of the navigation menu
+        if (navButton.style.display === "none") {
+            navButton.style.display = "block";
+        } else {
+            navButton.style.display = "block";
+        }
+    }
+</script>
+
+<!--Smooth Sliding-->
+<script>
+    $(document).ready(function () {
+        // Smooth scroll to the target section
+        $('.scroll-btn').on('click', function (event) {
+            event.preventDefault();
+
+            // Target element to scroll to
+            var targetElement = $($(this).attr('href'));
+
+            // Scroll smoothly to the target element
+            $('html, body').animate({
+                scrollTop: targetElement.offset().top
+            }, 800); // Adjust the scroll speed if needed
+        });
+    });
+</script>
+</html>
